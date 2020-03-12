@@ -10,7 +10,7 @@ $(function () {
   hideModal()
 
   $(document).on('click', '.grid-item', function (e) {
-    showModal()
+    renderModal($(e.currentTarget).data('id'))
   })
 
   $('#hide-modal').on('click', function () {
@@ -52,6 +52,18 @@ $(function () {
     })
   }
 
+  function renderModal(id) {
+    let char = list[id]
+    $('.window-title').text(`${char.name}`)
+    $('.avatar-img').attr('src', char.image)
+    $('.status').text(`${char.status}`)
+    $('.species').text(`${char.species}`)
+    $('.gender').text(`${char.gender}`)
+    $('.origin').text(`${char.origin.name}`)
+    $('.location').text(`${char.location.name}`)
+
+    showModal()
+  }
 
   function showModal() {
     modal.show()
