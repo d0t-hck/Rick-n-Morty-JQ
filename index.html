@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel= "preconnect" href="https://rickandmortyapi.com/api/" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>Rick & Morty</title>
+</head>
+
+<body>
+  <header>
+
+  </header>
+
+  <main>
+    <section>
+      <div class="container counter">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <span class="stats">
+          <span class="current">--</span> / <span class="total">---</span>
+        </span>
+      </div>
+
+      <div class="main-grid" id="list">
+        <!-- grid elements here -->
+      </div>
+
+      <div class="container">
+        <button class="load-more">load more</button>
+      </div>
+    </section>
+
+    <div class="modal" id="modal">
+      <div class="modal-title">
+        <div class="window-title">{{ Window Title }}</div>
+        <div id="hide-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512.001 512.001">
+            <path fill="#fff" d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+                L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+                c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+                l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+                L284.286,256.002z" />
+          </svg>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="avatar">
+          <img class="avatar-img" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+        </div>
+        <div class="description">
+          <p><b>status</b>: <span class="status">Alive</span></p>
+          <p><b>species</b>: <span class="species">Human</span></p>
+          <p><b>gender</b>: <span class="gender">Male</span></p>
+          <p><b>origin</b>: <span class="origin">Earth</span></p>
+          <p><b>last location</b>: <span class="location">Earth</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay hide" id="overlay"></div>
+
+  </main>
+
+  <footer>
+    <div>.hck &copy; 2020</div>
+  </footer>
+
+  <script src="./jquery-3.4.1.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
